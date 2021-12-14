@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import SignIn from "./src/pages/SignIn";
-import Example from "./src/pages/Example";
+import Home from "./src/pages/Home";
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,7 @@ export default () => (
       />
       <Stack.Screen
         name="App"
-        component={Example}
+        component={Home}
         options={{ title: "Success!" }}
       />
     </Stack.Navigator>
