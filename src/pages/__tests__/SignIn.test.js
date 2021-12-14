@@ -10,8 +10,8 @@ it("renders default elements", () => {
   const { getAllByText, getByPlaceholderText } = render(<SignIn />);
 
   expect(getAllByText("Login").length).toBe(2);
-  getByPlaceholderText("example");
-  getByPlaceholderText("***");
+  getByPlaceholderText("user");
+  getByPlaceholderText("****");
 });
 
 it("shows invalid input messages", () => {

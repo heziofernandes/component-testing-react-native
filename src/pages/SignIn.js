@@ -90,14 +90,14 @@ export default ({ navigation }) => {
       <Text style={styles.headerText}>Login</Text>
       <Input
         label="Username"
-        placeholder="example"
+        placeholder="user"
         onChangeText={username.set}
         error={usernameErrorMsg}
         testID="SignIn.usernameInput"
       />
       <Input
         label="Password"
-        placeholder="***"
+        placeholder="****"
         secureTextEntry
         onChangeText={password.set}
         error={passwordErrorMsg}
