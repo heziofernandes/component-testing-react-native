@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`handles valid input submission 1`] = `
+exports[`Valid input submission 1`] = `
 Array [
   Array [
     "https://jsonplaceholder.typicode.com/users",

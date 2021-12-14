@@ -1,22 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, KeyboardAvoidingView } from "react-native";
-
 import { Input, Button, ErrorText } from "../components/Form";
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    paddingHorizontal: 40,
-  },
-  headerText: {
-    color: "#353031",
-    fontWeight: "bold",
-    fontSize: 34,
-    marginBottom: 10,
-  },
-});
 
 const useLoginFormState = ({ navigation }) => {
   const [username, setUsername] = useState("");
@@ -108,3 +92,18 @@ export default ({ navigation }) => {
     </KeyboardAvoidingView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    paddingHorizontal: 40,
+  },
+  headerText: {
+    color: "#353031",
+    fontWeight: "bold",
+    fontSize: 34,
+    marginBottom: 10,
+  },
+});

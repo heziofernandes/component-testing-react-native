@@ -55,7 +55,7 @@ it("shows invalid password error message", () => {
   expect(queryAllByText("Invalid username.").length).toBe(0);
 });
 
-it("handles valid input submission", async () => {
+it("Valid input submission", async () => {
   fetch.mockResponseOnce(JSON.stringify({ passes: true }));
 
   const pushMock = jest.fn();

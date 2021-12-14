@@ -7,6 +7,45 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+export const Input = ({ label, error, ...props }) => {
+  const containerStyles = [styles.inputContainer];
+  if (error) {
+    containerStyles.push(styles.inputContainerError);
+  }
+
+  return (
+    <View style={containerStyles}>
+      <Text style={styles.inputLabel}>{label}</Text>
+
+      <View style={styles.row}>
+        <TextInput autoCapitalize="none" style={styles.input} {...props} />
+      </View>
+    </View>
+  );
+};
+
+export const Button = ({ text, onPress, ...props }) => {
+  return (
+    <TouchableOpacity {...props} onPress={onPress} style={styles.button}>
+      <Text style={styles.buttonText}>{text}</Text>
+    </TouchableOpacity>
+  );
+};
+
+export const ErrorText = ({ messages = [] }) => {
+  const displayMessages = messages.filter((msg) => msg !== undefined);
+
+  return (
+    <View style={styles.errorContainer}>
+      {displayMessages.map((msg) => (
+        <Text key={msg} style={styles.errorText}>
+          {msg}
+        </Text>
+      ))}
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   inputContainer: {
     backgroundColor: "#f4f6f8",
@@ -57,42 +96,3 @@ const styles = StyleSheet.create({
     color: "#cc0011",
   },
 });
-
-export const Input = ({ label, error, ...props }) => {
-  const containerStyles = [styles.inputContainer];
-  if (error) {
-    containerStyles.push(styles.inputContainerError);
-  }
-
-  return (
-    <View style={containerStyles}>
-      <Text style={styles.inputLabel}>{label}</Text>
-
-      <View style={styles.row}>
-        <TextInput autoCapitalize="none" style={styles.input} {...props} />
-      </View>
-    </View>
-  );
-};
-
-export const Button = ({ text, onPress, ...props }) => {
-  return (
-    <TouchableOpacity {...props} onPress={onPress} style={styles.button}>
-      <Text style={styles.buttonText}>{text}</Text>
-    </TouchableOpacity>
-  );
-};
-
-export const ErrorText = ({ messages = [] }) => {
-  const displayMessages = messages.filter((msg) => msg !== undefined);
-
-  return (
-    <View style={styles.errorContainer}>
-      {displayMessages.map((msg) => (
-        <Text key={msg} style={styles.errorText}>
-          {msg}
-        </Text>
-      ))}
-    </View>
-  );
-};
