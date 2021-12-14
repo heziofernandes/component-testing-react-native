@@ -3,8 +3,9 @@ React component test demonstration project.
 The repository uses React-Native, Testing-library, and React-scripts integration.
 
 ### Testing Framework used 🤖
-* [React](https://create-react-app.dev/docs/adding-typescript/#getting-started-with-typescript-and-react)
+* [React Native](https://reactnative.dev/)
 * [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+* [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 
 ### React Testing Library: 🧪
 React Testing Library is a light-weight testing library.  It provides light utility functions on top of react-dom and react-dom/test-utils, in a way that encourages good testing practices.
