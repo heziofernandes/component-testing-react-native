@@ -17,7 +17,7 @@ export default () => (
         options={{ title: "Sign In" }}
       />
       <Stack.Screen
-        name="App"
+        name="Home"
         component={Home}
         options={{ title: "Success!" }}
       />

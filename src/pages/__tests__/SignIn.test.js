@@ -64,9 +64,9 @@ it("Valid input submission", async () => {
   fireEvent.changeText(getByTestId("SignIn.usernameInput"), "fernandes");
   fireEvent.changeText(getByTestId("SignIn.passwordInput"), "123456");
   fireEvent.press(getByTestId("SignIn.Button"));
-
   expect(fetch.mock.calls).toMatchSnapshot();
+
   await act(flushMicrotasksQueue);
 
-  expect(pushMock).toBeCalledWith("App");
+  expect(pushMock).toBeCalledWith("Home");
 });

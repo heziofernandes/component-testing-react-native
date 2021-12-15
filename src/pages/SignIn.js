@@ -44,7 +44,7 @@ const useLoginFormState = ({ navigation }) => {
           })
             .then((response) => response.json())
             .then(() => {
-              navigation.push("App");
+              navigation.push("Home");
             })
             .catch((error) => {
               console.log("error", error);
