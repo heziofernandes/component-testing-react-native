@@ -21,7 +21,7 @@ Libraries and Frameworks For React Developers supports
 * Cypress IO.
 * React-testing-library.
 * Puppeteer.
-* 
+
 ## Integrations: ⚙️
 In order to prove the test compatibility on different operating systems and also different versions of Node.JS, integration with Github Actions was performed.
 
